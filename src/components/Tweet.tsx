@@ -29,11 +29,19 @@ export const MyTweet = ({ tweet, components }: Props) => {
   )
 }
 
+// The homepage is statically prerendered, so this fetch runs during `next build`
+// against the page's `staticPageGenerationTimeout` budget. A hung request is not
+// a rejected promise, so the try/catch below can't save us — bound it explicitly
+// and degrade to TweetNotFound instead of timing out the whole page.
+const FETCH_TIMEOUT_MS = 5_000
+
 const TweetContent = async ({ id, components, onError }: TweetProps) => {
   let enriched: EnrichedTweet | undefined
 
   try {
-    const tweet = id ? await getTweet(id) : undefined
+    const tweet = id
+      ? await getTweet(id, { signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) })
+      : undefined
     // enrichTweet can throw on malformed/partial API responses (e.g. when the
     // tweet endpoint is rate-limited at build time), so keep it inside the try.
     if (tweet) {
