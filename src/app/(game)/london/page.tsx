@@ -1,7 +1,8 @@
 import data from './data/features.json'
+import routes from './data/routes.json'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import 'react-circular-progressbar/dist/styles.css'
-import { DataFeatureCollection } from '@/lib/types'
+import { DataFeatureCollection, RoutesFeatureCollection } from '@/lib/types'
 import config from './config'
 import GamePage from '@/components/GamePage'
 import { Provider } from '@/lib/configContext'
@@ -20,6 +21,8 @@ const fc = {
   features: data.features.filter((f) => !!config.LINES[f.properties.line]),
 } as DataFeatureCollection
 
+const routesFc = routes as RoutesFeatureCollection
+
 export const metadata = config.METADATA
 
 export default function London() {
@@ -28,6 +31,7 @@ export default function London() {
       <Main className={`${font.className} min-h-screen`}>
         <GamePage
           fc={fc}
+          routes={routesFc}
           callout={
             <a
               href="https://undergroundoku.com"
