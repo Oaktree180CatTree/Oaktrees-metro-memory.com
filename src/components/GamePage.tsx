@@ -202,10 +202,22 @@ export default function GamePage({
               3,
             ],
             'line-color': ['get', 'color'],
-            'line-offset': ['match', ['get', 'line'], '', 2, 0],
+            'line-offset': [
+              'interpolate',
+              ['linear'],
+              ['zoom'],
+              9,
+              ['coalesce', ['get', 'overlapOffsetPx'], 0],
+              13,
+              ['*', 2, ['coalesce', ['get', 'overlapOffsetPx'], 0]],
+              18,
+              ['*', 4, ['coalesce', ['get', 'overlapOffsetPx'], 0]],
+            ],
           },
           source: 'lines',
           layout: {
+            'line-cap': 'round',
+            'line-join': 'round',
             'line-sort-key': ['-', 100, ['get', 'order']],
           },
         })
