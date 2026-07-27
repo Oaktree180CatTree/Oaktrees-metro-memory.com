@@ -1,13 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import jsdom from 'jsdom'
 
+// See the note in Tweet.tsx: these run at build time against the page's
+// generation budget, so every request needs an explicit ceiling.
+const FETCH_TIMEOUT_MS = 5_000
+
 async function LinkPreview({ url }: { url: string }) {
   let title = ''
   let description = ''
   let image = ''
 
   try {
-    const response = await fetch(url)
+    const response = await fetch(url, {
+      signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+    })
     const data = await response.text()
     const doc = new jsdom.JSDOM(data)
     title = doc.window.document.querySelector('title')?.textContent || ''
