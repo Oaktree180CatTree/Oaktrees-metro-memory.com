@@ -6189,6 +6189,10 @@
               "path_index": 178
             },
             {
+              "id": "Iver",
+              "path_index": 181
+            },
+            {
               "id": "Langley",
               "path_index": 183
             },
@@ -27990,6 +27994,29 @@
         "level": 0,
         "station_id": "Langley",
         "summary": "Langley: Station Open"
+      }
+    },
+    "Iver": {
+      "live_code": "Iver",
+      "routes": ["ElizabethLine", "NationalRailGW"],
+      "brands": ["NationalRail", "TfLRail"],
+      "name": "Iver",
+      "coords": [51.50862307536082, -0.5063703708080247],
+      "route_icon_names": [
+        "uk-london-crossrail",
+        "uk-rail-great-western-railway"
+      ],
+      "status": {
+        "description": "",
+        "effect_time_periods": [
+          {
+            "end": "2023-10-10T08:43:57.048206+00:00",
+            "start": "2023-10-10T06:43:57.048206+00:00"
+          }
+        ],
+        "level": 0,
+        "station_id": "Iver",
+        "summary": "Iver: Station Open"
       }
     },
     "ElephantAndCastle": {
