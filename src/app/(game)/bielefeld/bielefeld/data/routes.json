@@ -1,0 +1,56 @@
+{
+  "routes": [
+    {
+      "id": "line-1",
+      "name": "Linie 1",
+      "color": "#0055A5",
+      "stations": [
+        {"id": "senne", "name": "Senne", "coordinates": [8.5283, 51.9612]},
+        {"id": "brackwede-kirche", "name": "Brackwede Kirche", "coordinates": [8.5134, 51.9868]},
+        {"id": "adenauerplatz", "name": "Adenauerplatz", "coordinates": [8.5222, 52.0169]},
+        {"id": "jahnplatz", "name": "Jahnplatz", "coordinates": [8.5323, 52.0228]},
+        {"id": "hauptbahnhof", "name": "Hauptbahnhof", "coordinates": [8.5332, 52.0294]},
+        {"id": "rathaus", "name": "Rathaus", "coordinates": [8.5319, 52.0205]},
+        {"id": "schildesche", "name": "Schildesche", "coordinates": [8.5521, 52.0594]}
+      ]
+    },
+    {
+      "id": "line-2",
+      "name": "Linie 2",
+      "color": "#009B48",
+      "stations": [
+        {"id": "sieker", "name": "Sieker", "coordinates": [8.5639, 52.0094]},
+        {"id": "adenauerplatz", "name": "Adenauerplatz", "coordinates": [8.5222, 52.0169]},
+        {"id": "jahnplatz", "name": "Jahnplatz", "coordinates": [8.5323, 52.0228]},
+        {"id": "hauptbahnhof", "name": "Hauptbahnhof", "coordinates": [8.5332, 52.0294]},
+        {"id": "rathaus", "name": "Rathaus", "coordinates": [8.5319, 52.0205]},
+        {"id": "altenhagen", "name": "Altenhagen", "coordinates": [8.6181, 52.0631]}
+      ]
+    },
+    {
+      "id": "line-3",
+      "name": "Linie 3",
+      "color": "#E30613",
+      "stations": [
+        {"id": "duerkopp-tor-6", "name": "Dürkopp Tor 6", "coordinates": [8.5441, 52.0161]},
+        {"id": "jahnplatz", "name": "Jahnplatz", "coordinates": [8.5323, 52.0228]},
+        {"id": "hauptbahnhof", "name": "Hauptbahnhof", "coordinates": [8.5332, 52.0294]},
+        {"id": "rathaus", "name": "Rathaus", "coordinates": [8.5319, 52.0205]},
+        {"id": "babenhausen-sued", "name": "Babenhausen-Süd", "coordinates": [8.5124, 52.0591]}
+      ]
+    },
+    {
+      "id": "line-4",
+      "name": "Linie 4",
+      "color": "#ED6B00",
+      "stations": [
+        {"id": "stieghorst-zentrum", "name": "Stieghorst Zentrum", "coordinates": [8.5881, 52.0006]},
+        {"id": "jahnplatz", "name": "Jahnplatz", "coordinates": [8.5323, 52.0228]},
+        {"id": "hauptbahnhof", "name": "Hauptbahnhof", "coordinates": [8.5332, 52.0294]},
+        {"id": "rathaus", "name": "Rathaus", "coordinates": [8.5319, 52.0205]},
+        {"id": "universitaet", "name": "Universität", "coordinates": [8.4947, 52.0371]},
+        {"id": "lohmannshof", "name": "Lohmannshof", "coordinates": [8.4824, 52.0431]}
+      ]
+    }
+  ]
+}
